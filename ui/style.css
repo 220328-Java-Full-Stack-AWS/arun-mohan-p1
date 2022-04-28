@@ -1,0 +1,115 @@
+body {
+    background-color: white;
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 50px;
+}
+h1 { 
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+ul.maintop {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul.maintop li {
+  float: left;
+}
+ul.maintop li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  margin: 5px;
+  text-decoration: none;
+}
+/*
+ul.maintop li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: orangered;
+}
+*/
+ul.main {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.logo {
+    display: block;
+    height: 75px;
+    width: 175px;
+}
+p {
+    font-family: Georgia;
+    font-size: 20px;
+}
+
+table.outer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+td.space {
+    padding: 12px;
+    width: 50%;
+    /*border: 2px solid darkgreen;*/
+}
+
+h3 {
+    color: black;
+    font-size: 30px;
+}
+
+div.section1 {
+    background-color: white;
+    border-style: double;
+    border-color: black;
+}
+
+div.section2 {
+    background-color: burlywood;
+    border-style: double;
+    border-color: black;
+}
+
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+
+.contentBox {
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-bottom: 5px solid gray;
+  border-right: 6px solid gray;
+  margin: auto;
+  width: min-content;
+}
+
+
+.contentBoxButton {
+  align-self: center;
+}

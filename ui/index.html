@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mohan Revature ERS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script src="./scripts/userConnection.js"></script>
+    <div style="text-align: left;">
+        <img src="./imgs/rev_logo.png" alt="Revature" class="logo">
+    </div>
+    <br>
+    <nav>
+        <ul class="maintop">
+            <li><a class="active">Employee Reimbursement Service</a></li>
+        </ul>
+    </nav>
+    <h1>View or Create a Reimbursement</h1>
+    <main>
+        <table class="outer">
+            <tr>
+                <td class="space">
+                    <div class="section1">
+                        <h3>Some purchases might be eligible for reimbursement by Revature. They can fall under the following <i>types</i>:
+                        </h3>
+                        <ul>
+                            <li><h3>(LODGE)</h3></li>
+                            <li><h3>(FOOD)</h3></li>
+                            <li><h3>(TRAVEL)</h3></li>
+                        <ul>
+                    </div>>
+
+                </td>
+
+                <td class="space">
+                    <div class="section2">
+                        <br>
+                        <div class="contentBox">
+                            <div class="flexColumn">
+                                <div class="flexRow">
+                                    <label>Amount: </label>
+                                    <input type="text" id="amount" placeholder="amount" name="000">
+                                </div>
+                                <div class="flexRow">
+                                    <label>Description: </label>
+                                    <input type="text" id="desc" placeholder="description" name="desc">
+                                </div>
+                                <div class="flexRow">
+                                    <label>Type: </label>
+                                    <input type="text" id="type" placeholder="type" name="FOOD">
+                                </div>
+                                <div class="flexRow">
+                                    <label>Submit Date: </label>
+                                    <input type="text" id="sub_date" placeholder="date" name="date">
+                                </div>
+                            </div>
+                            <button onclick="submitForm()">Submit Request</button>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <script>
+            async function submitForm() {
+
+            }
+
+
+        </script>
+
+        <footer>
+            <nav>
+                <ul class="main">
+                    <li>.</li>
+                </ul>
+            </nav>
+        </footer>
+    </main>
+</body>
+
+</html>

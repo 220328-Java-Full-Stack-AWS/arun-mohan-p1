@@ -1,0 +1,39 @@
+Informational responses (100–199),
+Successful responses (200–299),
+    200 OK
+    201 Created
+    202 Accepted
+    etc. ...
+Redirects (300–399),
+    300 Multiple Choices
+        more than one valid option the server could respond with.
+        let the client decide in these circumstances and respond with multiple links
+    301 Moved Permanently
+        URL has changed and the response ought to include the new address
+    302 Found
+        Resource has temporarily relocated
+    303 See Other
+        tells the client to send a get request to another URL
+Client errors (400–499),
+    400 Bad Request
+        the request couldn't be understood something was wrong with the syntax
+    401 Unauthorized
+        the client needs to be authenticated
+    403 Forbidden
+        client doesn't have rights to the content -- it's not just a matter of logging in
+    404 Not Found
+        Can't find the resource requested
+    405 Method Not Allowed
+        occurs when you use an HTTP method that the server is not config to support at this endpoint
+    406 Not Acceptable
+        resource the server finds does not fit the criteria of what is acceptable to the user
+        HTTP accept headers are restrictive:  only Accept a JPEG and the server has an HTML document
+    410 Gone
+        The resource has been removed.
+    418 I'm a teapot
+        "The server refuses the attempt to brew coffee with a teapot.." etc.
+Server errors (500–599).
+    500 Internal Server Error
+    503 Service Unavailable
+        service might be down for maintenance
+        The response should indicate when to retry etc.

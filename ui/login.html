@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Mohan Revature ERS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<script src="./scripts/userConnection.js"></script>
+<div style="text-align: left;">
+    <img src="./imgs/rev_logo.png" alt="Revature" class="logo">
+</div>
+<br>
+<nav>
+    <ul class="maintop">
+        <li><a class="active">Employee Reimbursement Service</a></li>
+    </ul>
+</nav>
+<h1>Please Log In to Your Account</h1>
+<main>
+    <div class="section2">
+        <br>
+        <div class="contentBox">
+            <div class="flexColumn">
+                <div class="flexRow">
+                    <label>Username: </label>
+                    <input type="text" id="username" placeholder="username" name="username">
+                </div>
+                <div class="flexRow">
+                    <label>Password: </label>
+                    <input type="text" id="password" placeholder="password" name="password">
+                </div>
+            </div>
+            <button onclick="submitForm()">Login</button>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <script>
+            async function submitForm() {
+
+
+                    window.location.href = "./index.html";
+
+            }
+
+
+        </script>
+
+    <footer>
+        <nav>
+            <ul class="main">
+                <li>.</li>
+            </ul>
+        </nav>
+    </footer>
+</main>
+</body>
+
+</html>

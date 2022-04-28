@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register Mohan Revature ERS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<script src="./scripts/userConnection.js"></script>
+<div style="text-align: left;">
+    <img src="./imgs/rev_logo.png" alt="Revature" class="logo">
+</div>
+<br>
+<nav>
+    <ul class="maintop">
+        <li><a class="active">Employee Reimbursement Service</a></li>
+    </ul>
+</nav>
+<h1>Please Log In to Your Account</h1>
+<main>
+    <div class="section2">
+        <br>
+        <div class="contentBox">
+            <div class="flexColumn">
+                <div class="flexRow">
+                    <label>First Name: </label>
+                    <input type="text" id="firstName" placeholder="firstName" name="John">
+                </div>
+                <div class="flexRow">
+                    <label>Last Name: </label>
+                    <input type="text" id="lastName" placeholder="lastName" name="Smith">
+                </div>
+                <div class="flexRow">
+                    <label>Username: </label>
+                    <input type="text" id="username" placeholder="username" name="johnsmith1">
+                </div>
+                <div class="flexRow">
+                    <label>Password: </label>
+                    <input type="text" id="password" placeholder="password" name="password">
+                </div>
+                <div class="flexRow">
+                    <label>Email: </label>
+                    <input type="text" id="email" placeholder="email" name="smithjohn@gmail.com">
+                </div>
+            </div>
+            <button onclick="submitForm()">Register</button>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <script>
+            async function submitForm() {
+                /*
+                Build the object we will transfer in our API call. Grab the values from
+                the input elements above.
+                */
+                let newUser = {
+                    firstName: document.getElementById("firstName").value,
+                    lastName: document.getElementById("lastName").value,
+                    username: document.getElementById("username").value,
+                    password: document.getElementById("password").value,
+                    email: document.getElementById("email").value
+                }
+                //console.log(newUser);//fact finding
+
+                //Make our asynchronous API call
+                let response = await registerRequest(newUser);
+
+                //console.log("Response: ", response);//fact finding
+                //console.log("Response JSON: ", response.json());//we should delete these later
+
+                if (response.status == 201) {   // new user successfully persisted
+                    let token = response.headers.get("authToken");
+                    //console.log("authToken received: ", token);//fact finding
+                    localStorage.setItem("authToken", token);
+
+                    //navigate the window to the landing page
+                    //window.location.href = "./index.html";
+
+                } else {
+                    alert("Unable register, Please try again!");
+                }
+            }
+
+
+        </script>
+
+    <footer>
+        <nav>
+            <ul class="main">
+                <li>.</li>
+            </ul>
+        </nav>
+    </footer>
+</main>
+</body>
+
+</html>
